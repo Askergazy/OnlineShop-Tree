@@ -92,20 +92,6 @@ public class Move {
             // * `2` - положительный правый ключ новой родительской категории.
             // * `3` - положительный правый ключ основной перемещаемой категории.
 
-//            Query move = manager.createQuery("update Tree t set t.rightKey = t.rightKey + ?1  where t.leftKey   >= ?2 ");
-//            move.setParameter(1,upd);
-//            move.setParameter(2,rKey);
-//            move.executeUpdate();
-////
-//            Query moveBelow = manager.createQuery("update Tree t set t.rightKey = t.rightKey + ?1 ,t. where t.rightKey >= ?2 - ?1 and  t.leftKey <= ?2 - ?1 ");
-//            moveBelow.setParameter(1,upd);
-//            moveBelow.setParameter(2,rKey);
-//            moveBelow.executeUpdate();
-
-
-//            Query add = manager.createQuery("update Tree t set t.rightKey = t.rightKey   * -1 - ?1 +1,t.leftKey = t.leftKey  * -1 -?1 +1  where t.rightKey < 0");
-//            add.setParameter(1,upd);
-//            add.executeUpdate();
 
             manager.getTransaction().commit();
         }catch (Exception e){
