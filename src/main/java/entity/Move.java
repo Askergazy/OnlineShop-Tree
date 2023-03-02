@@ -109,19 +109,15 @@ public class Move {
                     lk.executeUpdate();//Закрытие промежутка
 
 
-
                     Query targetAfter = manager.createQuery("select t.leftKey from Tree t where t.id =?1");
                     targetAfter.setParameter(1,sourceId);
-                    System.out.println(targetAfter.getSingleResult());
 
-//
-                    Query add =  manager.createQuery("update Tree t set t.rightKey = 0 - (t.rightKey) + (?1 - (0 - (?2)) + 1),t.leftKey = 0 - (t.leftKey) + (?1 - (0 - (?2)) + 1),t.level =  t.level - 1 where t.rightKey <0");
+
+                    Query add =  manager.createQuery("update Tree t set t.rightKey = 0 - (t.rightKey) + (?1 - (0 - (?2)) + 1),t.leftKey = 0 - (t.leftKey) + (?1 - (0 - (?2)) + 1),t.level = t.level - ?3 where t.rightKey <0");
                     add.setParameter(1,maxRk.getSingleResult());
                     add.setParameter(2,targetAfter.getSingleResult());
+                    add.setParameter(3,tree.getLevel());
                     add.executeUpdate();
-
-
-
 
                 }
 
