@@ -1,12 +1,13 @@
-package entity;
+package askar.tree;
+
+import askar.tree.entity.Tree;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.Scanner;
 
 
 public class Move {
-      public void Move(){
+      public  static void moveCategory(){
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("main");
         EntityManager manager = entityManagerFactory.createEntityManager();

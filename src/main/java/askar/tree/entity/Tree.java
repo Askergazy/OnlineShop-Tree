@@ -1,4 +1,4 @@
-package entity;
+package askar.tree.entity;
 
 import javax.persistence.*;
 

@@ -1,4 +1,6 @@
-package entity;
+package askar.tree;
+
+import askar.tree.entity.Tree;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -7,7 +9,7 @@ import javax.persistence.Query;
 import java.util.Scanner;
 
 public class Delete {
-    public void Delete() {
+    public static void deleteCategory() {
 
 
 

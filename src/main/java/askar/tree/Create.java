@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Create {
 
-    public void createCategory() {
+    public static void createCategory() {
 
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("main");
