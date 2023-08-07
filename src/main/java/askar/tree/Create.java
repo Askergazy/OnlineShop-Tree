@@ -1,12 +1,13 @@
-package entity;
+package askar.tree;
+
+import askar.tree.entity.Tree;
 
 import javax.persistence.*;
 import java.util.Scanner;
-import java.util.logging.Level;
 
-public class Category {
+public class Create {
 
-    public static void main(String[] args) {
+    public void createCategory() {
 
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("main");
@@ -16,8 +17,6 @@ public class Category {
         Long id = Long.parseLong(scanner.nextLine());
         System.out.println("Введите название");
         String name = scanner.nextLine();
-
-
 
 
         try {

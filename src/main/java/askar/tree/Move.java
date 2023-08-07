@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 public class Move {
-    public static void main(String[] args) {
+      public void Move(){
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("main");
         EntityManager manager = entityManagerFactory.createEntityManager();

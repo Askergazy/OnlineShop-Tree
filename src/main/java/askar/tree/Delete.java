@@ -7,7 +7,7 @@ import javax.persistence.Query;
 import java.util.Scanner;
 
 public class Delete {
-    public static void main(String[] args) {
+    public void Delete() {
 
 
 
